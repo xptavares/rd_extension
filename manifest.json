@@ -1,0 +1,15 @@
+{
+  "name": "RDStation Assinar Form fill",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "fill in the form of /assinar",
+  "icons" : {
+    "16" : "favicon-16x16.png",
+    "48" : "favicon-32x32.png",
+    "128" : "favicon-96x96.png"
+  },
+  "content_scripts": [{
+    "matches": [ "http://localhost:3000/*" ],
+    "js": [ "jquery-1.12.2.min.js", "rd.js", "components.js", "main.js" ]
+  }]
+}

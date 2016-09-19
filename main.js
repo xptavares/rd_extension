@@ -54,4 +54,13 @@
   $('.container').last().append(components.div);
   $('#fill_btn').click(fill);
 
+  $('body').css( "background-color", "pink" );
+  $('td').css( "background-color", "pink" );
+  $('td').hover(function() {
+    $( this ).css( "background-color", "#F8FDFD" );
+  }, function() {
+    $( this ).css( "background-color", "pink" );
+  });
+
+
 })( jQuery, RD);

@@ -51,7 +51,23 @@
     $( "#user_account_terms_of_service" ).prop( "checked", true );
   };
 
+  var contract = function() {
+    var id =  window.location.pathname.replace("/conta/", "").replace("/clicksign", ""); // "/conta/41/clicksign"
+    var url = "http://localhost:4000/api/accounts/";
+    url += id +"/billing_url?api_authenticity_token=4ba2f37d-e0df-448e-b90d-82a0f2eb604d";
+    if(RD.QueryString.installments) {
+      url += "&amp;installments=" + RD.QueryString.installments;
+    }
+    if(RD.QueryString.payment_method) {
+      url += "&amp;payment_method=" + RD.QueryString.payment_method;
+    }
+    $.post(url).done(function(response) {
+      return location.assign(response.url);
+    });
+  };
+
   $('.container').last().append(components.div);
   $('#fill_btn').click(fill);
+  $('#contract').click(contract);
 
-})( jQuery, RD);
+})(jQuery, RD);

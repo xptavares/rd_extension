@@ -15,7 +15,8 @@
       "https://app-staging.rdstation.com.br/*",
       "https://app-staging2.rdstation.com.br/*",
       "http://localhost:4000/conta/*",
-      "https://app.rdstation.com.br/*"
+      "https://app.rdstation.com.br/*",
+      "http://172.17.0.1:4000/conta/*"
     ],
     "js": [ "jquery-1.12.2.min.js", "rd.js", "components.js", "main.js" ]
   }]
